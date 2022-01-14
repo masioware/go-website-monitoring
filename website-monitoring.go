@@ -82,7 +82,11 @@ func showLogs() {
 }
 
 func testWebsite(site string) {
-	response, _ := http.Get(site)
+	response, err := http.Get(site)
+
+	if err != nil {
+		fmt.Println("Error:", err)
+	}
 
 	if response.StatusCode == 200 {
 		fmt.Println("Site:", site, "has been successfully loaded!")
