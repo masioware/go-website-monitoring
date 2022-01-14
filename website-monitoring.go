@@ -132,8 +132,9 @@ func saveLogs(site string, status bool) {
 		fmt.Println("Error:", err)
 	}
 
-	line := site + " - ONLINE: " + strconv.FormatBool(status) + "\n"
-	file.WriteString(line)
+	currentTime := time.Now().Format("02/01/2006 15:04:05")
+	line := currentTime + " - " + site + " - ONLINE: " + strconv.FormatBool(status)
 
+	file.WriteString(line + "\n")
 	file.Close()
 }
