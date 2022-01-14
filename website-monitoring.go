@@ -113,6 +113,7 @@ func readWebsitesFromFile() []string {
 		}
 	}
 
-	fmt.Println(result)
+	file.Close()
+
 	return result
 }
