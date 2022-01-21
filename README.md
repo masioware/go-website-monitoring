@@ -1,2 +1,3 @@
 # go-website-monitoring
-Simple study project for learning GO!
+
+A CLI application that regularly monitors websites that are in a file and logs their status code
